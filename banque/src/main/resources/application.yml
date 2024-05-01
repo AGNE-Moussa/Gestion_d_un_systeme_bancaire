@@ -1,0 +1,12 @@
+# Configuration de la connexion � la base de donn�es.
+spring:
+  datasource:
+    url: jdbc:h2:mem:banque
+    username: root
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true # Pour eviter que le script data.sql s'execute avant l'initialisation Hibernate.
+  h2:
+    console.enabled: true # Acc�s � la console H2 dans votre navigateur http://localhost:8080/h2-console
